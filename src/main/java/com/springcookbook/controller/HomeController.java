@@ -5,11 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class HelloController {
-    @RequestMapping("hi")
+public class HomeController {
+
+    @RequestMapping("/home")
     @ResponseBody
-    public String hi() {
-        return "Hello, world.";
+    public String home() {
+        return "home";
     }
 
 }
