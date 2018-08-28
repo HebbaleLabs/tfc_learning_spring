@@ -1,9 +1,9 @@
 package com.springcookbook.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.springcookbook.domain.User;
 
@@ -19,7 +19,7 @@ public class UserController {
     public String addUser(@ModelAttribute("defaultUser") User user) {
         System.out.println(user.getFirstName());
         System.out.println(user.isMarried());
-        return "redirect:/home";
+        return "redirect:/";
     }
 
     @ModelAttribute("defaultUser")
