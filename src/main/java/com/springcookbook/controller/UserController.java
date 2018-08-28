@@ -22,6 +22,11 @@ public class UserController {
         return "redirect:/";
     }
 
+    @RequestMapping("admin")
+    public String admin() {
+        return "admin";
+    }
+
     @ModelAttribute("defaultUser")
     public User defaultUser() {
         User user = new User();
